@@ -1,84 +1,241 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dizzeyy - writing fiction">
+  <meta name="description" content="Dizzeyy - fantasy fiction and videogame articles">
   <title>Fiction by Dizzeyy</title>
   <style>
     * { box-sizing: border-box; }
+
     body {
-      margin: 0; min-height: 100vh; display: flex; align-items: center;
-      justify-content: center; padding: 24px; font-family: Georgia, "Times New Roman", serif;
-      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.08), transparent 30%),
-                  radial-gradient(circle at 80% 80%, rgba(255,255,255,.06), transparent 30%), #17151b;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.08), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,.06), transparent 30%),
+        #17151b;
       color: #f5f0e8;
     }
+
+    .layout {
+      width: min(900px, 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+
     main {
-      width: min(560px, 100%); text-align: center; padding: 64px 32px;
-      border: 1px solid rgba(255,255,255,.12); border-radius: 20px;
-      background: rgba(255,255,255,.045); box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      flex: 1;
+      min-width: 0;
+      max-width: 560px;
+      text-align: center;
+      padding: 64px 32px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      background: rgba(255,255,255,.045);
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
       backdrop-filter: blur(8px);
     }
+
     .mark {
-      width: 54px; height: 54px; margin: 0 auto 28px; display: grid; place-items: center;
-      border: 1px solid rgba(245,240,232,.45); border-radius: 50%; font-size: 24px; font-style: italic;
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 28px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(245,240,232,.45);
+      border-radius: 50%;
+      font-size: 24px;
+      font-style: italic;
     }
-    h1 { margin: 0; font-size: clamp(2.2rem, 8vw, 3.6rem); font-weight: 400; letter-spacing: -.03em; }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 8vw, 3.6rem);
+      font-weight: 400;
+      letter-spacing: -.03em;
+    }
+
     .subtitle {
-      margin: 12px 0 40px; font-family: Arial, Helvetica, sans-serif; font-size: .95rem;
-      letter-spacing: .16em; text-transform: uppercase; color: #c8c0b5;
+      margin: 12px 0 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .95rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #c8c0b5;
     }
+
     a {
-      display: inline-block; min-width: 190px; padding: 14px 24px;
-      border: 1px solid rgba(245,240,232,.45); border-radius: 999px;
-      color: #f5f0e8; text-decoration: none; font-family: Arial, Helvetica, sans-serif;
-      font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; transition: .2s ease;
+      display: inline-block;
+      padding: 14px 24px;
+      border: 1px solid rgba(245,240,232,.45);
+      border-radius: 999px;
+      color: #f5f0e8;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .9rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: .2s ease;
     }
-    a:hover { background: #f5f0e8; color: #17151b; transform: translateY(-2px); }
-    .lab-description {
-      margin: 34px auto 10px; max-width: 390px; font-family: Arial, Helvetica, sans-serif;
-      font-size: .9rem; line-height: 1.6; color: #d8c0b5;
+
+    a:hover {
+      background: #f5f0e8;
+      color: #17151b;
+      transform: translateY(-2px);
     }
-    .lab-description strong { font-family: Georgia, "Times New Roman", serif; color: #f5f0e8; }
+
+    .fiction-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .fiction-links a {
+      width: min(100%, 300px);
+    }
+
     footer {
-      margin-top: 42px; font-family: Arial, Helvetica, sans-serif; font-size: .72rem;
-      letter-spacing: .08em; color: #817a72;
+      margin-top: 42px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .72rem;
+      line-height: 1.6;
+      letter-spacing: .08em;
+      color: #817a72;
+    }
+
+    /* The smaller secondary panel */
+
+    .lecture-lab {
+      flex: 0 0 250px;
+      text-align: center;
+      padding: 32px 22px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 20px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .lecture-lab .lab-icon {
+      font-size: 27px;
+      margin-bottom: 18px;
+      color: #c8c0b5;
+    }
+
+    .lecture-lab h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      font-weight: 400;
+    }
+
+    .lecture-lab p {
+      margin: 16px 0 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .85rem;
+      line-height: 1.7;
+      color: #b9afa6;
+    }
+
+    .lecture-lab a {
+      width: 100%;
+      font-size: .75rem;
+      padding: 13px 12px;
+    }
+
+    /* Stack panels on smaller screens */
+
+    @media (max-width: 700px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      main, .lecture-lab {
+        width: 100%;
+        max-width: 560px;
+        flex: auto;
+      }
+
+      .lecture-lab {
+        padding: 28px 24px;
+      }
+
+      main {
+        padding: 48px 24px;
+      }
     }
   </style>
 </head>
 <body>
-  <main>
-    <div class="mark">D</div>
-    <h1>Dizzeyy</h1>
-    <div class="subtitle">Read my ongoing fantasy story, The Arcadium</div>
 
-    <a href="https://www.reamstories.com/page/msl4n32m70b0df/story/mt6f8m7lea69c2/chapter/mt6f9o8jd4fa5f0/paragraph/mtx11qnz139981" target="_blank" rel="noopener noreferrer">
-      Ream
-    </a>
+  <div class="layout">
 
-        <a href="https://www.scribblehub.com/series/2622850/the-arcadium/" target="_blank" rel="noopener noreferrer">
-      Scribblehub
-    </a>
+    <main>
+      <div class="mark">D</div>
+      <h1>Dizzeyy</h1>
 
-        <a href="https://www.wattpad.com/myworks/417670559-the-arcadium" target="_blank" rel="noopener noreferrer">
-      Wattpad
-    </a>
+      <div class="subtitle">
+        Read my ongoing fantasy story, The Arcadium
+      </div>
 
-       <!-- <a href="https://reamstories.com/page/msl4n32m70b0df/public" target="_blank" rel="noopener noreferrer">
-      AO3
-    </a>
+      <div class="fiction-links">
 
-       <!-- <a href="https://reamstories.com/page/msl4n32m70b0df/public" target="_blank" rel="noopener noreferrer">
-      Read on site
-    </a> -->
+        <a href="https://www.reamstories.com/page/msl4n32m70b0df/story/mt6f8m7lea69c2/chapter/mt6f9o8jd4fa5f0/paragraph/mtx11qnz139981"
+           target="_blank" rel="noopener noreferrer">
+          Ream
+        </a>
 
-     <a href="https://www.patreon.com/c/dizzeyywrites" target="_blank" rel="noopener noreferrer">
-      Support my writing on Patreon <3
-    </a>
+        <a href="https://www.scribblehub.com/series/2622850/the-arcadium/"
+           target="_blank" rel="noopener noreferrer">
+          Scribblehub
+        </a>
 
-    <footer>The Arcadium is a romance story set in a solarpunk-inspired world. It involves relationships, combat sport, and characters who 
-      use profanity. It is intended for mature audiences. CW: language, mild violence, sex, and nudity.</footer>
-  </main>
+        <a href="https://www.wattpad.com/myworks/417670559-the-arcadium"
+           target="_blank" rel="noopener noreferrer">
+          Wattpad
+        </a>
+
+        <a href="https://www.patreon.com/c/dizzeyywrites"
+           target="_blank" rel="noopener noreferrer">
+          Support my writing on Patreon &lt;3
+        </a>
+
+      </div>
+
+      <footer>
+        The Arcadium is a romance story set in a
+        solarpunk-inspired world. It involves
+        relationships, combat sport, and characters
+        who use profanity. It is intended for mature
+        audiences. CW: language, mild violence, sex,
+        and nudity.
+      </footer>
+    </main>
+
+    <aside class="lecture-lab">
+      <div class="lab-icon">✧</div>
+
+      <h2>Dizzeyy's<br>Videogame<br>Lecture Lab</h2>
+
+      <p>
+        Articles, essays, and assorted thoughts
+        about videogames.
+      </p>
+
+      <a href="lecture-lab.html">
+        Visit the Lab
+      </a>
+    </aside>
+
+  </div>
+
 </body>
 </html>
