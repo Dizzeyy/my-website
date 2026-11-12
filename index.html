@@ -150,6 +150,64 @@
       padding: 13px 12px;
     }
 
+    
+/* Individual published work cards */
+
+.fiction-links a.work-card {
+  display: block;
+  width: 100%;
+  padding: 20px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.035);
+  text-align: center;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.fiction-links a.work-card:hover {
+  background: rgba(255,255,255,.09);
+  border-color: rgba(70,210,235,.774);
+  color: #f5f0e8;
+  transform: translateY(-2px);
+}
+
+.work-title {
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #f5f0e8;
+}
+
+.work-description {
+  margin: 0 0 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78rem;
+  line-height: 1.7;
+  color: #b9afa6;
+}
+
+.work-warning {
+  margin: 0 0 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72rem;
+  line-height: 1.6;
+  color: #a9a096;
+}
+
+.work-read {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #c8c0b5;
+}
+
+.fiction-links .support-link {
+  margin-top: 12px;
+}
+
+
     footer {
       margin-top: 42px;
       font-family: Arial, Helvetica, sans-serif;
@@ -210,30 +268,83 @@
 
       <div class="fiction-links">
 
-        <!-- <a href="https://www.reamstories.com/page/msl4n32m70b0df/story/mt6f8m7lea69c2/chapter/mt6f9o8jd4fa5f0/paragraph/mtx11qnz139981"
-           target="_blank" rel="noopener noreferrer">
-          Ream
-        </a>
+        
+<div class="fiction-links">
 
-        <a href="https://www.scribblehub.com/series/2622850/the-arcadium/"
-           target="_blank" rel="noopener noreferrer">
-          Scribblehub
-        </a> -->
+  <!-- <a href="https://www.reamstories.com/page/msl4n32m70b0df/story/mt6f8m7lea69c2/chapter/mt6f9o8jd4fa5f0/paragraph/mtx11qnz139981"
+       target="_blank" rel="noopener noreferrer">
+    Ream
+  </a>
 
-        <a href="https://www.wattpad.com/story/417987421-inclement"
-           target="_blank" rel="noopener noreferrer">
-          Inclement
-        </a>
+  <a href="https://www.scribblehub.com/series/2622850/the-arcadium/"
+     target="_blank" rel="noopener noreferrer">
+    Scribblehub
+  </a> -->
 
-         <a href="https://www.wattpad.com/myworks/417670559-the-arcadium"
-           target="_blank" rel="noopener noreferrer">
-          The Arcadium
-        </a>
+  <!-- Inclement -->
 
-        <a href="https://www.patreon.com/c/dizzeyywrites"
-           target="_blank" rel="noopener noreferrer">
-          Support my writing on Patreon &lt;3
-        </a>
+  <a class="work-card"
+     href="https://www.wattpad.com/story/417987421-inclement"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <h3 class="work-title">Inclement</h3>
+
+    <p class="work-description">
+      Inclement is an adventure story set in a
+      climate dystopian world. It involves
+      exploration, depictions of death, and
+      characters who use profanity.
+    </p>
+
+    <p class="work-warning">
+      CW: language, death.
+    </p>
+
+    <div class="work-read">
+      Read on Wattpad →
+    </div>
+
+  </a>
+
+  <!-- The Arcadium -->
+
+  <a class="work-card"
+     href="https://www.wattpad.com/myworks/417670559-the-arcadium"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <h3 class="work-title">The Arcadium</h3>
+
+    <p class="work-description">
+      The Arcadium is a romance story set in a
+      solarpunk-inspired world. It involves
+      relationships, combat sport, and characters
+      who use profanity.
+    </p>
+
+    <p class="work-warning">
+      CW: language, mild violence, sex,
+      and nudity.
+    </p>
+
+    <div class="work-read">
+      Read on Wattpad →
+    </div>
+
+  </a>
+
+  <!-- Patreon -->
+
+  <a class="support-link"
+     href="https://www.patreon.com/c/dizzeyywrites"
+     target="_blank"
+     rel="noopener noreferrer">
+    Support my writing on Patreon &lt;3
+  </a>
+
+</div>
+
 
       </div>
 
