@@ -41,6 +41,35 @@
   color: #c8c0b5;
 }
 
+    .top-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 28px;
+}
+
+.top-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border: 1px solid rgba(245,240,232,.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,.025);
+  color: #c8c0b5;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  transition: .2s ease;
+}
+
+.top-nav a:hover {
+  background: rgba(255,255,255,.09);
+  border-color: rgba(70,210,235,.65);
+  color: #f5f0e8;
+  transform: translateX(-2px);
+}
+
     h1 {
       margin: 0 0 14px;
       font-size: clamp(2rem, 7vw, 3.2rem);
@@ -120,6 +149,9 @@
 
 <body>
   <main>
+     <nav class="top-nav" aria-label="Page navigation">
+    <a href="index.html">← Home</a>
+  </nav>
     <div class="lab-icon" aria-hidden="true">✧</div>
     <h1>Essays &amp; articles about videogames</h1>
 
