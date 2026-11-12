@@ -32,6 +32,8 @@
       gap: 24px;
     }
 
+    /* Large Lecture Lab panel */
+
     main {
       flex: 1;
       min-width: 0;
@@ -45,22 +47,11 @@
       backdrop-filter: blur(8px);
     }
 
-.mark {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 28px;
-  border: 1px solid rgba(70, 210, 235, 0.774);
-  border-radius: 50%;
-  overflow: hidden;
-  background: #fff;
-}
-
-.mark img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .lab-icon {
+      font-size: 48px;
+      margin-bottom: 18px;
+      color: #c8c0b5;
+    }
 
     h1 {
       margin: 0;
@@ -98,6 +89,54 @@
       transform: translateY(-2px);
     }
 
+    .lab-button {
+      width: min(100%, 300px);
+    }
+
+    /* Smaller Arcadium panel */
+
+    .arcadium {
+      flex: 0 0 250px;
+      text-align: center;
+      padding: 32px 22px;
+      border: 1px solid rgba(70, 210, 235, 0.774);
+      border-radius: 20px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .mark {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 28px;
+      border: 1px solid rgba(70, 210, 235, 0.774);
+      border-radius: 50%;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .mark img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .arcadium h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      font-weight: 400;
+    }
+
+    .arcadium .subtitle {
+      margin: 16px 0 24px;
+      font-size: .85rem;
+      line-height: 1.7;
+      letter-spacing: normal;
+      text-transform: none;
+      color: #b9afa6;
+    }
+
     .fiction-links {
       display: flex;
       flex-direction: column;
@@ -106,7 +145,9 @@
     }
 
     .fiction-links a {
-      width: min(100%, 300px);
+      width: 100%;
+      font-size: .75rem;
+      padding: 13px 12px;
     }
 
     footer {
@@ -118,44 +159,6 @@
       color: #817a72;
     }
 
-    /* The smaller secondary panel */
-
-    .lecture-lab {
-      flex: 0 0 250px;
-      text-align: center;
-      padding: 32px 22px;
-      border: 1px solid rgba(70, 210, 235, 0.774);
-      border-radius: 20px;
-      background: rgba(255,255,255,.025);
-    }
-
-    .lecture-lab .lab-icon {
-      font-size: 27px;
-      margin-bottom: 18px;
-      color: #c8c0b5;
-    }
-
-    .lecture-lab h2 {
-      margin: 0;
-      font-size: 1.5rem;
-      line-height: 1.3;
-      font-weight: 400;
-    }
-
-    .lecture-lab p {
-      margin: 16px 0 24px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: .85rem;
-      line-height: 1.7;
-      color: #b9afa6;
-    }
-
-    .lecture-lab a {
-      width: 100%;
-      font-size: .75rem;
-      padding: 13px 12px;
-    }
-
     /* Stack panels on smaller screens */
 
     @media (max-width: 700px) {
@@ -163,13 +166,13 @@
         flex-direction: column;
       }
 
-      main, .lecture-lab {
+      main, .arcadium {
         width: 100%;
         max-width: 560px;
         flex: auto;
       }
 
-      .lecture-lab {
+      .arcadium {
         padding: 28px 24px;
       }
 
@@ -183,11 +186,31 @@
 
   <div class="layout">
 
+    <!-- Large Lecture Lab panel -->
+
     <main>
+      <div class="lab-icon">✧</div>
+
+      <h1>Dizzeyy's<br>Videogame<br>Lecture Lab</h1>
+
+      <p class="subtitle">
+        Hear me firehose about videogame design why don't you
+      </p>
+
+      <a class="lab-button" href="lecture-lab.html">
+        Visit the Lab
+      </a>
+    </main>
+
+    <!-- Smaller Arcadium panel -->
+
+    <aside class="arcadium">
+
       <div class="mark">
-  <img src="Dizzeyy_Logo.jpg" alt="Dizzeyy Logo">
-</div>
-      <h1>Dizzeyy</h1>
+        <img src="Dizzeyy_Logo.jpg" alt="Dizzeyy Logo">
+      </div>
+
+      <h2>Dizzeyy</h2>
 
       <div class="subtitle">
         Read my ongoing fiction story: The Arcadium
@@ -195,7 +218,7 @@
 
       <div class="fiction-links">
 
-       <!-- <a href="https://www.reamstories.com/page/msl4n32m70b0df/story/mt6f8m7lea69c2/chapter/mt6f9o8jd4fa5f0/paragraph/mtx11qnz139981"
+        <!-- <a href="https://www.reamstories.com/page/msl4n32m70b0df/story/mt6f8m7lea69c2/chapter/mt6f9o8jd4fa5f0/paragraph/mtx11qnz139981"
            target="_blank" rel="noopener noreferrer">
           Ream
         </a>
@@ -225,20 +248,7 @@
         audiences. CW: language, mild violence, sex,
         and nudity.
       </footer>
-    </main>
 
-    <aside class="lecture-lab">
-      <div class="lab-icon">✧</div>
-
-      <h2>Dizzeyy's<br>Videogame<br>Lecture Lab</h2>
-
-      <p>
-        Hear me firehose about videogame design why don't you
-      </p>
-
-      <a href="lecture-lab.html">
-        Visit the Lab
-      </a>
     </aside>
 
   </div>
