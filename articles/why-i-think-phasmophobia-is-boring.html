@@ -44,7 +44,14 @@
     .footnotes { border-top: 1px solid rgba(245,240,232,.18); margin-top: 42px; padding-top: 22px; color: #c8c0b5; }
     .footnotes-label { font-size: .7rem; margin-bottom: 14px; }
     .footnotes p { font-size: .87rem; }
-    nav { text-align: center; margin-top: 45px; margin-bottom: 30px;} 
+    nav {
+  max-width: 760px;
+  margin: 0 auto -20px;
+  padding-left: 30px;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
     .back { display: inline-block; font-size: .77rem; text-decoration: none; border: 1px solid rgba(245,240,232,.4); border-radius: 999px; padding: 13px 20px; transition: .2s ease; }
     .back:hover { background: #f5f0e8; color: #17151b; }
     @media (max-width: 600px) { body { padding: 16px 12px 40px; } main { padding: 34px 22px; } }
