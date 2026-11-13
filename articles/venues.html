@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dizzeyy’s Videogame Lecture Lab: Venues">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <title>Venues — Dizzeyy's Lecture Lab</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 20px 64px;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.08), transparent 30%),
+                  radial-gradient(circle at 80% 80%, rgba(255,255,255,.06), transparent 30%), #17151b;
+      color: #f5f0e8;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      background: rgba(255,255,255,.045);
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    header { text-align: center; margin-bottom: 44px; }
+    .star { font-size: 40px; line-height: 1; color: #c8c0b5; margin-bottom: 18px; }
+    .eyebrow, .date, .back, .footnotes-label { font-family: Arial, Helvetica, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    .eyebrow { color: #c8c0b5; font-size: .72rem; }
+    h1 { margin: 18px auto; font-size: clamp(2.1rem, 6vw, 3.1rem); font-weight: 400; line-height: 1.14; letter-spacing: -.035em; }
+    .date { font-size: .7rem; color: #a9a096; }
+    .rule { height: 1px; background: rgba(245,240,232,.18); margin: 35px auto; max-width: 180px; }
+    article { max-width: 610px; margin: auto; }
+    article p { margin: 0 0 .78em; font-size: clamp(1.05rem, 2.2vw, 1.17rem); line-height: 1.75; overflow-wrap: anywhere; }
+    article p.aside-joke { font-size: .72rem; line-height: 1.45; color: #aaa29b; margin-top: -.3em; margin-bottom: 1.7em; font-style: italic; }
+    article strong { color: #fff8ef; font-weight: 700; }
+    a { color: #d6c6b9; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #fff; }
+    .source-link { font-family: Arial, Helvetica, sans-serif; font-size: .81rem; line-height: 1.6; margin: 0 0 1.3em; }
+    .footnote-ref { font-family: Arial, Helvetica, sans-serif; font-size: .7em; vertical-align: super; text-decoration: none; }
+    .footnotes { border-top: 1px solid rgba(245,240,232,.18); margin-top: 42px; padding-top: 22px; color: #c8c0b5; }
+    .footnotes-label { font-size: .7rem; margin-bottom: 14px; }
+    .footnotes p { font-size: .87rem; }
+    nav {
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+    .back { display: inline-block; font-size: .77rem; text-decoration: none; border: 1px solid rgba(245,240,232,.4); border-radius: 999px; padding: 13px 20px; transition: .2s ease; }
+    .back:hover { background: #f5f0e8; color: #17151b; }
+    @media (max-width: 600px) { body { padding: 16px 12px 40px; } main { padding: 34px 22px; } }  </style>
+</head>
+<body>
+  <nav><a class="back" href="../lecture-lab.html">← Back to the Lecture Lab</a></nav>
+  <main>
+    <header>
+      <div class="star" aria-hidden="true">✧</div>
+      <div class="eyebrow">Dizzeyy's Videogame Lecture Lab</div>
+      <h1>Venues</h1>
+      <div class="date"><time datetime="2026-11-11">November 11, 2026</time></div>
+      <div class="rule" aria-hidden="true"></div>
+    </header>
+    <article>
+<p>I read a book once called 'The Art of Game Design', by Jesse Schell.<br>
+It's an interesting book.<br>
+Basically it's a bunch of game design ideas slapped together,<br>
+formatted according to a map of theoretical player experience.<br>
+It's really cool,<br>
+and brimming, just bursting at the seems, absolutely FILLED to its sides being squeezed taught<br>
+with ideas.<br>
+Some of those ideas, I'll be honest, I've thought about since reading the book.<br>
+I'm going to take one of those ideas here,<br>
+extrapolate on it,<br>
+explain it.<br>
+Here's the main thing:<br>
+"venues."</p>
+        <p>The idea is, when you're designing a game you are not just designing an experience in a vacuum.<br>
+Each video game has a <em>place</em> where it is <em>played</em>.<br>
+A nintendo DS is played in variable locations,<br>
+but a nintendo wii will be played on a TV.<br>
+And that TV is probably in a relatively public place.<br>
+That relatively public place is probably not the same kind of place where you have a computer,<br>
+especially a super-juiced-up one, your super-riced lenovo laptop with a custom linux distro that's plugged into three backup generators and a 4x size rubber duck.<br>
+(For coding purposes.)</p>
+        <p>See, Jesse Schell figured out that one useful perspective in video gaming is to look at the venue games are played in.<br>
+He realized that you could categorize them by how private or how public they were.<br>
+For instance, he talks about one venue that hasn't changed much in human history: "the workbench."<br>
+A place of solitude, where a single person works on some kind of craft.<br>
+A desk in a garage, or a personal workspace in an office.<br>
+Or, the place where you have a computer and play factorio.</p>
+        <p>A much different venue than what Schell calls "the hearth", which is the communal area where people living together come to share warmth.<br>
+The TV, he argues, is much like a modern hearth - and games played in the hearth venue are things like mario kart, and snipperclips.<br>
+Shared experiences, shared stories.</p>
+        <p>Is this a hard and fast rule? No. Does every game have to slot into some perfect venue category? I don't think so.<br>
+Especially not handheld games, which can be played anywhere from a train to the venue Schell would call "the reading nook", a private place to do something low-effort and rejuvenative<br>
+(as opposed to the workbench, which is for focused, sometimes high-octane work).</p>
+        <p>And some games do feel like work,<br>
+or as I've heard them described "fun chores" -<br>
+factorio, minecraft.<br>
+And some games do feel like a shared experience around a communal place -<br>
+super smash brothers, wii sports.<br>
+And some games are definitely private experiences -<br>
+Ace Attorney, HuniePop.</p>
+        <p>And this way of looking at experiences and games has stuck with me,<br>
+but especially the hearth.<br>
+See, a communal living area with some point of interest between people<br>
+(or at least at some point in the room)<br>
+is an interesting way to describe a room.<br>
+But it's not a perspective that I'd seen or heard before.<br>
+And I thought it was neat.</p>
+        <p>That's basically what the book is full of,<br>
+and I'm not trying to sell you copies of his book,<br>
+I don't know the guy, if you want to talk to him go to Pennsylvania.</p>
+    </article>
+    <nav><a class="back" href="../lecture-lab.html">← Back to the Lecture Lab</a></nav>
+  </main>
+</body>
+</html>
