@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,8 +54,31 @@
     .back:hover { background: #f5f0e8; color: #17151b; }
     @media (max-width: 600px) { body { padding: 16px 12px 40px; } main { padding: 34px 22px; } }
     .context { font-family: Arial, Helvetica, sans-serif; font-size: 7em; font-weight: 800; line-height: 1; letter-spacing: -.055em; text-align: center; margin: .36em 0 .42em; overflow-wrap: anywhere; }
+  blockquote.quote {
+  margin: 2.2em 0;
+  padding: 20px 26px;
+  border-left: 3px solid rgba(70, 210, 235, 0.774);
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  font-size: clamp(1.18rem, 2.5vw, 1.32rem);
+  line-height: 1.65;
+  color: #fff8ef;
+}
+
+blockquote.quote cite {
+  display: block;
+  margin-top: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c8c0b5;
+}
   </style>
 </head>
+  
 <body>
   <nav><a class="back" href="../lecture-lab.html">← Back to the Lecture Lab</a></nav>
   <main>
@@ -127,7 +151,10 @@
 <p>Lucas Pope, creator of <em>Papers, Please</em> and <em>Return of the Obra Dinn</em>. Pope's core interest is not in programming, but in developing GUI tools. His games are essentially built out of UX interfaces.
 <p>Hidetaka Miyazaki, designer, writer, president, and director of FromSoftware, and FromSoftware's <em>Dark Souls</em> games. His history-and-mythology-inspired games are known for being difficult because of his philosophy that players should feel that they overcame tremendous odds. He also prefers to make games without adjustable difficulty, and in-game stories that are less like stories and more like a random dude in a hidden part of a basement in a valley says "to, ah, at last" and then a guy on the Dark Souls wiki says that that proves Gwyn is a lesbian.  
 <p>John Carmack, co-founder of id software with John Romero and lead programmer of the foundational DOOM, Quake, and Wolfenstein. I'll give you his philosophy in a quote of his:
-<p>“Story in a game is like story in a porn movie. It's expected to be there, but it's not important." -John Carmack
+<blockquote class="quote">
+  “Story in a game is like story in a porn movie. It's expected to be there, but it's not important."
+<cite>— John Carmack</cite>
+</blockquote>
 <p>And then there's Tim Schafer, creator of <em>Grim Fandango</em> and <em>Psychonauts</em>. His studio Double Fine creates games with stories and human themes, and Schafer has said that he strives to integrate story and gameplay.
 <p>If Hidetaka Miyazaki comes out with a game and I am a gamer who is trying to get his expectations up to par, I can be confident that it will be difficult, depressing, and historical-themed.
 <p>If John Carmack or John Romero made another game, it would probably be a 3D action shooter.
