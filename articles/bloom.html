@@ -44,71 +44,91 @@
     .footnotes { border-top: 1px solid rgba(245,240,232,.18); margin-top: 42px; padding-top: 22px; color: #c8c0b5; }
     .footnotes-label { font-size: .7rem; margin-bottom: 14px; }
     .footnotes p { font-size: .87rem; }
+    figure.article-image { margin: 2em auto 2.2em; text-align: center; max-width: 100%; }
+    figure.article-image img { width: 100%; height: auto; border-radius: 14px; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 10px 30px rgba(0,0,0,.4); display: block; }
+    figure.article-image figcaption {
+      margin-top: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: #a9a096;
+    }
     nav {
-  text-align: center;
-  margin-top: 45px;
-  margin-bottom: 30px;
-}
+      text-align: center;
+      margin-top: 45px;
+      margin-bottom: 30px;
+    }
     .back { display: inline-block; font-size: .77rem; text-decoration: none; border: 1px solid rgba(245,240,232,.4); border-radius: 999px; padding: 13px 20px; transition: .2s ease; }
     .back:hover { background: #f5f0e8; color: #17151b; }
+    blockquote.quote {
+      margin: 2.2em 0;
+      padding: 20px 26px;
+      border-left: 3px solid rgba(70, 210, 235, 0.774);
+      background: rgba(255, 255, 255, 0.035);
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+      font-size: clamp(1.18rem, 2.5vw, 1.32rem);
+      line-height: 1.65;
+      color: #fff8ef;
+    }
+    blockquote.quote cite {
+      display: block;
+      margin-top: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #c8c0b5;
+    }
     @media (max-width: 600px) { body { padding: 16px 12px 40px; } main { padding: 34px 22px; } }
-     blockquote.quote {
-  margin: 2.2em 0;
-  padding: 20px 26px;
-  border-left: 3px solid rgba(70, 210, 235, 0.774);
-  background: rgba(255, 255, 255, 0.035);
-  border-radius: 0 12px 12px 0;
-  font-style: italic;
-  font-size: clamp(1.18rem, 2.5vw, 1.32rem);
-  line-height: 1.65;
-  color: #fff8ef;
-}
-
-blockquote.quote cite {
-  display: block;
-  margin-top: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #c8c0b5;
-}
   </style>
 </head>
 <body>
-<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=765010476" target="_blank" rel="noopener noreferrer">Everybody loves bloom.</a></p>
-<p>Bloom is a graphics effect that mimics a real-world camera effect.<a class="footnote-ref" href="#note-1" aria-label="See footnote 1">[1]</a> Basically, it makes the light in an image 'fuzzy'.</p>
+  <nav><a class="back" href="../lecture-lab.html">← Back to the Lecture Lab</a></nav>
+  <main>
+    <header>
+      <div class="star" aria-hidden="true">✧</div>
+      <div class="eyebrow">Dizzeyy's Videogame Lecture Lab</div>
+      <h1>Bloom</h1>
+      <div class="date"><time datetime="2026-11-15">November 15, 2026</time></div>
+      <div class="rule" aria-hidden="true"></div>
+    </header>
+    <article>
+      <p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=765010476" target="_blank" rel="noopener noreferrer">Everybody loves bloom.</a></p>
+      <p>Bloom is a graphics effect that mimics a real-world camera effect.<a class="footnote-ref" href="#note-1" aria-label="See footnote 1">[1]</a> Basically, it makes the light in an image 'fuzzy'.</p>
 
-  <figure class="article-image">
-  <img src="../images/bioshock-bloom.png" alt="Bloom lighting effect on neon signs in BioShock Infinite">
-</figure>
-  
-<p>I don't have a lot to say about it. It's been used extensively in video games. I like it, I think it adds a lot of aesthetic value. 
-<p>One of the first games with bloom was actually Riven, the sequel to the original Myst!
-<p>In 2004, the creators of Tron 2 published a very influential article about bloom. The article was called 'Real-Time Glow'.<a class="footnote-ref" href="#note-2" aria-label="See footnote 2">[2]</a>
-<p>They noticed how making things glow made computer graphics look less shit. Normally, videogame graphics looked very 'flat.'
-<p>Allow me to present an example of what they were talking about.
-  <figure style="margin: 2.5em auto; text-align: center; max-width: 100%;">
-  <img src="../images/3D_Movie_Maker_pre-rendered_example.png" alt="A Screenshot of real-time graphics" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 14px; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 10px 30px rgba(0,0,0,.4);">
-  <figcaption style="margin-top: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: #a9a096;">
-   By Microsoft Corporation, MIT, https://commons.wikimedia.org/w/index.php?curid=170620220
-  </figcaption>
-</figure>
+      <figure class="article-image">
+        <img src="../images/bioshock-bloom.png" alt="Bloom lighting effect on neon signs in BioShock Infinite">
+      </figure>
 
-<p>Compare the two pictures and you understand the idea.
-<p>Bloom is nice.
-<p>It makes good games gooder and bad games at least not look so shit.
-<p><a href="https://www.reddit.com/r/FuckTAA/comments/rue1hy/thoughts_on_visual_bloom_i_personally_hate_it/" target="_blank" rel="noopener noreferrer">Everyone agrees with me on this.</a></p>
-<p>Greg James and John O'Rorke of the aforementioned Real-Time Glow article noticed that games like the original <em>Splinter Cell</em> and <em>Halo 2</em> used bloom, as well in Pixar's filmmaking.
-<blockquote class="quote">
-  “Another notable and widespread use of glow can be seen in Pixar's film Finding Nemo, where glows convey the murkiness of seawater and help to set the mood for various scenes."
-<cite>— Greg James and John O'Rorke, <em>Real-Time Glow (May 26, 2004)</em></cite>
-</blockquote>
-<p>Greg and John called it glow, and another name for it is "light bloom". According to Wikipedia, the technique wasn't widely used until the publishing of the 2004 article, which led to an explosion in bloom.
-<p>Games such as Ico used it before, but the kind of bloom you get in Bioshock Infinite is probably due in part to this article's publishing. Which is good, because I think bloom is beautiful.
-<p><a href="https://steamcommunity.com/app/863590/discussions/0/3344417612871721788/" target="_blank" rel="noopener noreferrer">People get this, and they agree with me.</a></p>
-<p>(Also there is a thing called reticle bloom, when the UI reticle of a gun in an FPS sort of explodes each time you shoot to represent the diminishing accuracy of each shot as you fire in rapid succession.)</p>
+      <p>I don't have a lot to say about it. It's been used extensively in video games. I like it, I think it adds a lot of aesthetic value.</p>
+      <p>One of the first games with bloom was actually Riven, the sequel to the original Myst!</p>
+      <p>In 2004, the creators of Tron 2 published a very influential article about bloom. The article was called 'Real-Time Glow'.<a class="footnote-ref" href="#note-2" aria-label="See footnote 2">[2]</a></p>
+      <p>They noticed how making things glow made computer graphics look less shit. Normally, videogame graphics looked very 'flat.'</p>
+      <p>Allow me to present an example of what they were talking about.</p>
+
+      <figure class="article-image">
+        <img src="../images/3D_Movie_Maker_pre-rendered_example.png" alt="A Screenshot of real-time graphics">
+        <figcaption>By Microsoft Corporation, MIT, <a href="https://commons.wikimedia.org/w/index.php?curid=170620220" target="_blank" rel="noopener noreferrer">https://commons.wikimedia.org/w/index.php?curid=170620220</a></figcaption>
+      </figure>
+
+      <p>Compare the two pictures and you understand the idea.</p>
+      <p>Bloom is nice.</p>
+      <p>It makes good games gooder and bad games at least not look so shit.</p>
+      <p><a href="https://www.reddit.com/r/FuckTAA/comments/rue1hy/thoughts_on_visual_bloom_i_personally_hate_it/" target="_blank" rel="noopener noreferrer">Everyone agrees with me on this.</a></p>
+      <p>Greg James and John O'Rorke of the aforementioned Real-Time Glow article noticed that games like the original <em>Splinter Cell</em> and <em>Halo 2</em> used bloom, as well in Pixar's filmmaking.</p>
+
+      <blockquote class="quote">
+        “Another notable and widespread use of glow can be seen in Pixar's film Finding Nemo, where glows convey the murkiness of seawater and help to set the mood for various scenes."
+        <cite>— Greg James and John O'Rorke, <em>Real-Time Glow (May 26, 2004)</em></cite>
+      </blockquote>
+
+      <p>Greg and John called it glow, and another name for it is "light bloom". According to Wikipedia, the technique wasn't widely used until the publishing of the 2004 article, which led to an explosion in bloom.</p>
+      <p>Games such as Ico used it before, but the kind of bloom you get in Bioshock Infinite is probably due in part to this article's publishing. Which is good, because I think bloom is beautiful.</p>
+      <p><a href="https://steamcommunity.com/app/863590/discussions/0/3344417612871721788/" target="_blank" rel="noopener noreferrer">People get this, and they agree with me.</a></p>
+      <p>(Also there is a thing called reticle bloom, when the UI reticle of a gun in an FPS sort of explodes each time you shoot to represent the diminishing accuracy of each shot as you fire in rapid succession.)</p>
+
       <section class="footnotes" aria-label="Footnotes">
         <div class="footnotes-label">Notes</div>
         <p id="note-1">[1] <a href="https://en.wikipedia.org/wiki/Bloom_%28shader_effect%29" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Bloom_%28shader_effect%29</a></p>
