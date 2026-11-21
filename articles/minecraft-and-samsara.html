@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dizzeyy’s Videogame Lecture Lab: Minecraft and Samsara">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <title>Minecraft and Samsara — Dizzeyy's Lecture Lab</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 20px 64px;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.08), transparent 30%),
+                  radial-gradient(circle at 80% 80%, rgba(255,255,255,.06), transparent 30%), #17151b;
+      color: #f5f0e8;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      background: rgba(255,255,255,.045);
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    header { text-align: center; margin-bottom: 44px; }
+    .star { font-size: 40px; line-height: 1; color: #c8c0b5; margin-bottom: 18px; }
+    .eyebrow, .date, .back, .footnotes-label { font-family: Arial, Helvetica, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    .eyebrow { color: #c8c0b5; font-size: .72rem; }
+    h1 { margin: 18px auto; font-size: clamp(2.1rem, 6vw, 3.1rem); font-weight: 400; line-height: 1.14; letter-spacing: -.035em; }
+    .date { font-size: .7rem; color: #a9a096; }
+    .rule { height: 1px; background: rgba(245,240,232,.18); margin: 35px auto; max-width: 180px; }
+    article { max-width: 610px; margin: auto; }
+    article p { margin: 0 0 .78em; font-size: clamp(1.05rem, 2.2vw, 1.17rem); line-height: 1.75; overflow-wrap: anywhere; }
+    article p.aside-joke { font-size: .72rem; line-height: 1.45; color: #aaa29b; margin-top: -.3em; margin-bottom: 1.7em; font-style: italic; }
+    article strong { color: #fff8ef; font-weight: 700; }
+    article ul {
+      margin: 0.8em 0 1.4em;
+      padding-left: 1.4em;
+      font-size: clamp(1.05rem, 2.2vw, 1.17rem);
+      line-height: 1.75;
+    }
+    article li { margin-bottom: 0.35em; }
+    a { color: #d6c6b9; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #fff; }
+    .source-link { font-family: Arial, Helvetica, sans-serif; font-size: .81rem; line-height: 1.6; margin: 0 0 1.3em; }
+    .footnote-ref { font-family: Arial, Helvetica, sans-serif; font-size: .7em; vertical-align: super; text-decoration: none; }
+    .footnotes { border-top: 1px solid rgba(245,240,232,.18); margin-top: 42px; padding-top: 22px; color: #c8c0b5; }
+    .footnotes-label { font-size: .7rem; margin-bottom: 14px; }
+    .footnotes p { font-size: .87rem; }
+    figure.article-image { margin: 2em auto 2.2em; text-align: center; max-width: 100%; }
+    figure.article-image img { width: 100%; height: auto; border-radius: 14px; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 10px 30px rgba(0,0,0,.4); display: block; }
+    figure.article-image figcaption {
+      margin-top: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: #a9a096;
+    }
+    blockquote.quote {
+      margin: 2.2em 0;
+      padding: 20px 26px;
+      border-left: 3px solid rgba(70, 210, 235, 0.774);
+      background: rgba(255, 255, 255, 0.035);
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+      font-size: clamp(1.18rem, 2.5vw, 1.32rem);
+      line-height: 1.65;
+      color: #fff8ef;
+    }
+    blockquote.quote cite {
+      display: block;
+      margin-top: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #c8c0b5;
+    }
+    nav {
+      text-align: center;
+      margin-top: 45px;
+      margin-bottom: 30px;
+    }
+    .back { display: inline-block; font-size: .77rem; text-decoration: none; border: 1px solid rgba(245,240,232,.4); border-radius: 999px; padding: 13px 20px; transition: .2s ease; }
+    .back:hover { background: #f5f0e8; color: #17151b; }
+    @media (max-width: 600px) { body { padding: 16px 12px 40px; } main { padding: 34px 22px; } }
+  </style>
+</head>
+<body>
+  <nav><a class="back" href="../lecture-lab.html">← Back to the Lecture Lab</a></nav>
+  <main>
+    <header>
+      <div class="star" aria-hidden="true">✧</div>
+      <div class="eyebrow">Dizzeyy's Videogame Lecture Lab</div>
+      <h1>Minecraft and Samsara</h1>
+      <div class="date"><time datetime="2026-11-21">November 21, 2026</time></div>
+      <div class="rule" aria-hidden="true"></div>
+    </header>
+    <article>
+      <p>I was playing the demo version of Minecraft today, because I am broke and I don't want to pay $30 for a game I don't really like. (Hey, that's how much Overwatch was.)</p>
+      <p>But love is with me today, and cool stuff has been happening, and when I went to download TF2, minecraft popped up instead and I said, sure.</p>
+      <p>I'll play the demo again.</p>
+      <p>And there I was,</p>
+      <p>doing stuff that I enjoy doing -</p>
+      <p>organizing my inventory and consolidating chest space.</p>
+      <p>Making a house.</p>
+      <p>Adding stairs to my mine shaft.</p>
+      <p>And then I thought about it again,</p>
+      <p>the endless loop of Minecraft.</p>
+      <p>You decide to do something,</p>
+      <p>you do it,</p>
+      <p>then you have to do something else,</p>
+      <p>then you go to do that,</p>
+      <p>you get sidetracked,</p>
+      <p>or you stay on task and do it,</p>
+      <p>but you have to do a bunch of in-between stuff to do it,</p>
+      <p>and you accomplish it,</p>
+      <p>and then there's some feeling of success?</p>
+      <p>Or maybe there's supposed to be.</p>
+      <p>For me, it's all empty nothing and needing to do more</p>
+      <p>except for one moment when I looked around at the house I'd built and organized</p>
+      <p>and went "huh, this is pretty impressive."</p>
+      <p>Especially given that the demo version of Minecraft is 1 hour and 40 minutes of playtime, then it locks you out.</p>
+      <p>So anyway, I thought about that endless loop,</p>
+      <p>and was reminded of samsara.</p>
+      <p>Now, before I get into Buddhist philosophy,</p>
+      <p>let me quote Keanu Reeves because I agree with him on this specific point:</p>
+      <p>I respect Buddhism,</p>
+      <p>but I haven't taken refuge in the dharma.</p>
+      <p>So this is just a general idea that applies to stuff, but it's not my religion.</p>
+      <p>Anyway.</p>
+      <p>Samsara in Buddhist philosophy is a wheel of endless misery. It's specifically a cycle of yearning for things, chasing after them, and then receiving only dissatisfaction when you get them, only to yearn for more things and chase after them.</p>
+      <p>Wanting, reaching, getting, then what you've gotten isn't enough.</p>
+      <p>Again and again,</p>
+      <p>over and over,</p>
+      <p>in an endless cycle.</p>
+      <p>Monkey see, monkey want, monkey get, monkey sad,</p>
+      <p><strong>MONKEY GET MORE THINGS</strong></p>
+      <p>and on and on.</p>
+      <p>So you can see the obvious parallel with Minecraft and videogames in general.</p>
+      <p>In Minecraft and other videogames, there is a design principle called a 'core gameplay loop'.</p>
+      <p>That translates to the pattern of actions a player takes while playing the game.</p>
+      <p>In the original Mario games, it would be something like -&gt; get into a new world -&gt; play up through increasing levels (1-1, 1-2, 1-3, etc.), learn the gimmicks of the world and its levels, fight a boss at the end of the world, go to a new world.</p>
+      <p>Repeat.</p>
+      <p>And if you're playing Minecraft or Mario, and you're not having any fun beating the worlds or gathering wood, then you're sort of in a samsara cycle.</p>
+      <p>Wanting to beat the world, but upon having beaten it, feeling like it wasn't worth the effort.</p>
+      <p>Wanting to punch more trees, but upon having punched them, feeling like you aren't any more satisfied post-punch.</p>
+      <p>But yeah, and then I thought,</p>
+      <p>you know,</p>
+      <p>given that the goals in Minecraft are generally self-directed,</p>
+      <p>isn't it kind of up to me to decide how happy I'm going to be?</p>
+      <p>Let me explain.</p>
+      <p>Thinking about samsara in life, and in Minecraft,</p>
+      <p>the thing is,</p>
+      <p>if I get to choose the goal, then achieving that goal is going to give me some amount of result</p>
+      <p>that is a little bit different than another goal.</p>
+      <p>And in the end,</p>
+      <p>if I am not happy with the result...</p>
+      <p>Isn't that my fault for not choosing a goal that gave me happiness?</p>
+      <p>I was standing in a cave.</p>
+      <p>I had just finished making my kitchen (a 2-blocks large space with a furnace SPECIFICALLY FOR FOOD ONLY and a chest also for food), organizing my chest, making my tunnel nice, turning all my fucking leaf litter into bone meal (why the FUCK did Mojang put so much goddamn leaf litter everywhere), getting full iron armor...</p>
+      <p>And anyway, then there I was,</p>
+      <p>and I thought,</p>
+      <p>ok cool I want a bow now. It'd be cool to shoot monsters.</p>
+      <p>So then I was standing in a cave.</p>
+      <p>And I was thinking about gameplay loops,</p>
+      <p>samsara,</p>
+      <p>Minecraft,</p>
+      <p>and I thought,</p>
+      <p>wait,</p>
+      <p>isn't there something opposite of samsara?</p>
+      <p>I mean, if you're designing a game and making a gameplay loop</p>
+      <p>isn't that loop supposed to be fun?</p>
+      <p>Like, the point is that every time the player 'goes around' the loop,</p>
+      <p>they're having a good time and whatever they get as the reward for completing a lap,</p>
+      <p>is worth it.</p>
+      <p>Then I thought the thought I thought above.</p>
+      <p>in the end,</p>
+      <p>if I am not happy with the result...</p>
+      <p>Isn't that my fault for not choosing a goal that gave me happiness?</p>
+      <p>...</p>
+      <p>Is this bow really gonna give me happiness?</p>
+      <p>...</p>
+      <p>So then I thought a while, on what I actually wanted to do in Minecraft,</p>
+      <p>and I actually realized something that would make me enjoy the game.</p>
+      <p>It would make me enjoy it a lot, actually.</p>
+      <p>Now, I'm not going to say it here,</p>
+      <p>cuz it's specific to me and it might not be specific to you,</p>
+      <p>but the point is,</p>
+      <p>instead of running down a mine shaft into the foggy stalactite cave of zombies to find a spider to kill a spider so that I had a bow to defend myself while possibly building things I didn't want to build in the first place, possibly in the overworld with a bed and never returning under y=0 so why would I even need a bow...</p>
+      <p>I just thought hard about a goal that would give me fulfillment and broke Buddhist philosophy.</p>
+      <p>Sorry not sorry Siddhartha.</p>
+      <p>I'll end this article with the main idea that made me kind of excited to write it.</p>
+      <p>If being stuck in a loop of chasing after contentment only to receive dissatisfaction is called samsara,</p>
+      <p>then going after goals that you know will fulfill you then being fulfilled must be funsara.</p>
+      <p>It's what would be in a good gameplay "loop",</p>
+      <p>and also what would be in a very good life,</p>
+      <p>or any game where you're self-directed and choose to do what you want.</p>
+      <p>The key is knowing what fulfills you,</p>
+      <p>and I am always surprised at just how bad I and other people are at knowing that.</p>
+
+      <!--
+      READY-TO-USE SNIPPETS (Uncomment and customize whenever needed):
+
+      IMAGE SNIPPET:
+      <figure class="article-image">
+        <img src="../images/your-image.png" alt="Image description">
+        <figcaption>Optional caption or source</figcaption>
+      </figure>
+
+      QUOTE SNIPPET:
+      <blockquote class="quote">
+        “Your quote text here.”
+        <cite>— Author Name, <em>Source Title</em></cite>
+      </blockquote>
+
+      INLINE FOOTNOTE REFERENCE SNIPPET:
+      <a class="footnote-ref" href="#note-1" aria-label="See footnote 1">[1]</a>
+
+      NOTES SECTION SNIPPET (Place right above </article>):
+      <section class="footnotes" aria-label="Footnotes">
+        <div class="footnotes-label">Notes</div>
+        <p id="note-1">[1] <a href="https://example.com">https://example.com</a></p>
+      </section>
+      -->
+    </article>
+    <nav><a class="back" href="../lecture-lab.html">← Back to the Lecture Lab</a></nav>
+  </main>
+</body>
+</html>
